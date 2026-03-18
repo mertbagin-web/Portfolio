@@ -1,6 +1,7 @@
 import dockerLogo from "../../logos/Docker.png";
 import gunicornlogo from "../../logos/Gunicorn.png";
 import repomakerGif from "../../logos/Projekte/RepomakerUI.gif";
+import pregoLogo from "../../logos/prego.jfif";
 
 export type ProjectAsset = {
   name: string;
@@ -34,6 +35,10 @@ export type Experience = {
   period: string;
   description: string;
   highlights: string[];
+  category: "work" | "uni";
+  tech?: string[];
+  activities?: string[];
+  logo?: string;
 };
 
 export type SkillGroup = {
@@ -91,28 +96,70 @@ export const skillGroups: SkillGroup[] = [
 
 export const experiences: Experience[] = [
   {
-    company: "Praxisprojekte & Studium",
-    role: "Angewandte Informatik Student",
-    period: "2023 - Heute",
-    description:
-      "Arbeit an verschiedenen Webprojekten im Studium und privat, mit Fokus auf Backend, API-Anbindung, Deployment und Teamarbeit.",
+    company: "Eigene Lernprojekte",
+    role: "Full-Stack orientierte Projektarbeit",
+    period: "2022 – Heute",
+    description: "Praxisnahe Entwicklung kleiner Anwendungen und Erkundung von Produktions-Workflows.",
     highlights: [
-      "React- und TypeScript-Projekte von Grund auf aufgebaut",
-      "Komponentenstrukturen und Routing in Single-Page-Apps umgesetzt",
-      "Build- und Deploy-Prozesse mit Vite und GitHub Pages eingerichtet"
+      "REST-APIs mit Node.js & Express",
+      "Docker, Nginx & Kubernetes erkundet",
+      "CI/CD mit GitHub Actions"
+    ],
+    category: "work"
+  },
+  {
+    company: "Prego Services GmbH",
+    role: "Werkstudent – IT Security Analyst",
+    period: "2024 – Heute",
+    logo: pregoLogo,
+    description: "Werkstudententätigkeit im Bereich IT-Security mit Fokus auf Analyse, Monitoring und Sicherheitsmaßnahmen.",
+    highlights: [
+      "Sicherheitsanalysen & Monitoring",
+      "SIEM-Systeme und Log-Auswertung",
+      "Schwachstellenmanagement"
+    ],
+    category: "work",
+    tech: [
+      "SIEM (Splunk / QRadar)",
+      "Wireshark",
+      "Nessus / Vulnerability Scanning",
+      "Linux CLI",
+      "Python Scripting",
+      "MITRE ATT&CK Framework",
+      "Ticketing-Systeme (Jira)"
+    ],
+    activities: [
+      "Überwachung und Analyse von Sicherheitsvorfällen im SIEM",
+      "Auswertung von Log-Daten und Identifikation von Anomalien",
+      "Durchführung von Schwachstellenscans und Dokumentation der Ergebnisse",
+      "Erstellung von Security-Reports und Handlungsempfehlungen",
+      "Unterstützung beim Aufbau interner Sicherheitsrichtlinien",
+      "Enge Zusammenarbeit mit dem IT-Team bei Incident Response"
     ]
   },
   {
-    company: "Eigene Lernprojekte",
-    role: "Full-Stack orientierte Projektarbeit",
-    period: "2022 - Heute",
-    description:
-      "Praxisnahe Entwicklung kleiner Anwendungen, um neue Technologien systematisch auszuprobieren und Produktions-Workflows zu verstehen.",
+    company: "Hochschule Worms",
+    role: "Angewandte Informatik (B.A.)",
+    period: "2023 – Heute",
+    description: "Studium mit Fokus auf Webentwicklung, Software Engineering und Teamarbeit.",
     highlights: [
-      "REST-Endpunkte mit Node.js und Express erstellt",
-      "Layouts, States und Formularlogik in React umgesetzt",
-      "Container- und Infrastrukturthemen mit Docker, Nginx und Kubernetes erkundet"
-    ]
+      "React & TypeScript im Studium eingesetzt",
+      "Routing & Komponentenarchitektur",
+      "Deployment mit Vite & GitHub Pages"
+    ],
+    category: "uni"
+  },
+  {
+    company: "Repomaker F-Droid",
+    role: "Backend-Entwickler & Scrum Master",
+    period: "Hochschule Worms",
+    description: "Teamorientiertes Hochschulprojekt mit Scrum-Prozessen und Docker-Deployment.",
+    highlights: [
+      "Backend-Strukturen mitentwickelt",
+      "Scrum Master: Sprints & Koordination",
+      "Docker für reproduzierbare Umgebungen"
+    ],
+    category: "uni"
   }
 ];
 

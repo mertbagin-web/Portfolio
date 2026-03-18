@@ -1,7 +1,5 @@
 import { BriefcaseBusiness, FolderKanban, Home, Mail, Wrench } from "lucide-react";
-import { useEffect, useState } from "react";
 import { NavLink, Route, Routes } from "react-router-dom";
-import { LoadingScreen } from "./components/LoadingScreen";
 import ProfileCard from "./components/ProfileCard";
 import ContactPage from "./pages/ContactPage";
 import ExperiencePage from "./pages/ExperiencePage";
@@ -19,28 +17,8 @@ const navigationItems = [
 ];
 
 function App() {
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    // Show loading screen for a minimum of 5 seconds, then until page fully loads
-    const loadingTimer = setTimeout(() => {
-      setIsLoading(false);
-    }, 5000);
-
-    // Also hide when the page actually finishes loading
-    window.addEventListener('load', () => {
-      setIsLoading(false);
-    });
-
-    return () => {
-      clearTimeout(loadingTimer);
-      window.removeEventListener('load', () => setIsLoading(false));
-    };
-  }, []);
-
   return (
     <div className="page">
-      <LoadingScreen isLoading={isLoading} />
       <nav className="side-nav" aria-label="Hauptnavigation">
         {navigationItems.map((item) => {
           const Icon = item.icon;

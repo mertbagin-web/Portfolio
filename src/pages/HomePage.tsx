@@ -7,7 +7,7 @@ function HomePage() {
 
   return (
     <section className="page-panel hero-panel">
-      <p className="hero__tag">Portfolio Starter</p>
+      <p className="hero__tag">Mert Bagin · Portfolio</p>
       <h1>{profile.name}</h1>
       <h2>{profile.role}</h2>
       <p className="hero__meta">{profile.location}</p>
