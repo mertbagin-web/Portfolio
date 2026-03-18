@@ -1,0 +1,14 @@
+<svg width="480" height="560" viewBox="0 0 480 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="480" height="560" rx="36" fill="#1B1F31"/>
+  <circle cx="240" cy="190" r="94" fill="url(#paint0_linear_1_2)"/>
+  <path d="M125 448C125 379.517 180.517 324 249 324H231C299.483 324 355 379.517 355 448V456H125V448Z" fill="#8A4DFF" fill-opacity="0.65"/>
+  <circle cx="240" cy="190" r="58" fill="#F1ECFF" fill-opacity="0.88"/>
+  <path d="M190 448C190 401.072 228.072 363 275 363H205C251.928 363 290 401.072 290 448V456H190V448Z" fill="#F1ECFF" fill-opacity="0.88"/>
+  <text x="50%" y="520" text-anchor="middle" fill="#CDAFFF" font-family="Arial, sans-serif" font-size="30" font-weight="700">Bildplatzhalter</text>
+  <defs>
+    <linearGradient id="paint0_linear_1_2" x1="146" y1="96" x2="335" y2="285" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#CDAFFF"/>
+      <stop offset="1" stop-color="#8A4DFF"/>
+    </linearGradient>
+  </defs>
+</svg>
