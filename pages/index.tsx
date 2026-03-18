@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Head from "next/head";
+import { PERSONAL_INFO } from "../constants/config";
 
 export default function Home() {
   return (
@@ -12,10 +13,10 @@ export default function Home() {
         <div style={{ marginBottom: "40px" }}>
           <p style={{ color: "#569cd6", fontSize: "14px", marginBottom: "4px" }}>// Welcome to my portfolio</p>
           <h1 style={{ fontSize: "48px", fontWeight: "700", color: "#cccccc", lineHeight: "1.2" }}>
-            Mert <span style={{ color: "#007acc" }}>Bagin</span>
+            {PERSONAL_INFO.name.split(" ")[0]} <span style={{ color: "#007acc" }}>{PERSONAL_INFO.name.split(" ")[1]}</span>
           </h1>
           <p style={{ color: "#9cdcfe", fontSize: "22px", marginTop: "8px" }}>
-            &lt;Full Stack Developer /&gt;
+            &lt;{PERSONAL_INFO.title} /&gt;
           </p>
           <p style={{ color: "#808080", fontSize: "13px", marginTop: "16px", maxWidth: "600px", lineHeight: "1.6" }}>
             Passionate about building modern web applications. I craft clean, efficient, and scalable solutions using the latest technologies.
@@ -86,7 +87,7 @@ export default function Home() {
           <h2 style={{ color: "#cccccc", fontSize: "15px", marginBottom: "16px", fontWeight: "600" }}>About</h2>
           <div style={{ display: "flex", gap: "16px" }}>
             <a
-              href="https://github.com/mertbagin-web"
+              href={PERSONAL_INFO.github}
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#3794ff", fontSize: "13px", textDecoration: "none", display: "flex", alignItems: "center", gap: "6px" }}
@@ -97,7 +98,7 @@ export default function Home() {
               GitHub
             </a>
             <a
-              href="https://www.linkedin.com/in/mertbagin"
+              href={PERSONAL_INFO.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "#3794ff", fontSize: "13px", textDecoration: "none", display: "flex", alignItems: "center", gap: "6px" }}

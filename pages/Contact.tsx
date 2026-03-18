@@ -1,5 +1,6 @@
 import Head from "next/head";
 import { useState } from "react";
+import { PERSONAL_INFO } from "../constants/config";
 
 export default function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
@@ -11,6 +12,7 @@ export default function Contact() {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    // Demo implementation: shows a success state. In production, submit to a backend API or email service.
     setSubmitted(true);
   };
 
@@ -47,19 +49,19 @@ export default function Contact() {
 
         {/* Contact info */}
         <div style={{ display: "flex", flexDirection: "column", gap: "12px", marginBottom: "32px" }}>
-          <a href="mailto:mert@example.com" style={{
+          <a href={`mailto:${PERSONAL_INFO.email}`} style={{
             display: "flex", alignItems: "center", gap: "10px",
             color: "#3794ff", textDecoration: "none", fontSize: "13px"
           }}>
             <span>✉️</span> mert@example.com
           </a>
-          <a href="https://github.com/mertbagin-web" target="_blank" rel="noopener noreferrer" style={{
+          <a href={PERSONAL_INFO.github} target="_blank" rel="noopener noreferrer" style={{
             display: "flex", alignItems: "center", gap: "10px",
             color: "#3794ff", textDecoration: "none", fontSize: "13px"
           }}>
             <span>🐙</span> github.com/mertbagin-web
           </a>
-          <a href="https://www.linkedin.com/in/mertbagin" target="_blank" rel="noopener noreferrer" style={{
+          <a href={PERSONAL_INFO.linkedin} target="_blank" rel="noopener noreferrer" style={{
             display: "flex", alignItems: "center", gap: "10px",
             color: "#3794ff", textDecoration: "none", fontSize: "13px"
           }}>
